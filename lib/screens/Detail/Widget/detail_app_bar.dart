@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+
+class DetailAppBar extends StatelessWidget {
+  const DetailAppBar({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        IconButton(
+          style: IconButton.styleFrom(
+            padding: const EdgeInsets.all(20),
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          iconSize: 30,
+          icon: const Icon(Icons.arrow_back),
+        ),
+        const Text(
+          "Detail",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
+        IconButton(
+          style: IconButton.styleFrom(
+            padding: const EdgeInsets.all(20),
+          ),
+          onPressed: () {},
+          iconSize: 30,
+          icon: const Icon(Icons.favorite_border_sharp),
+        ),
+      ],
+    );
+  }
+}
